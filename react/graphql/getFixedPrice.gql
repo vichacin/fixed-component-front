@@ -1,0 +1,9 @@
+query test($skuId: String!, $tableName: String!){
+  getFixedPrice(skuId: $skuId, tableName: $tableName)
+  @context(provider: "tiendadevi.service-example-prices"){
+    tradePolicyId
+    value
+    listPrice
+    minQuantity
+  }
+}
